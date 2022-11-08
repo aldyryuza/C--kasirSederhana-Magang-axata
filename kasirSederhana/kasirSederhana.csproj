@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F670372-1E11-4414-8F67-FA62541076EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>kasirSederhana</RootNamespace>
+    <AssemblyName>kasirSederhana</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.7.7.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\barangDao.cs" />
+    <Compile Include="Dao\kategoriDao.cs" />
+    <Compile Include="Dao\pelangganDao.cs" />
+    <Compile Include="Dao\penjualanDao.cs" />
+    <Compile Include="Dao\satuanDao.cs" />
+    <Compile Include="Dao\suplierDao.cs" />
+    <Compile Include="Dao\userDao.cs" />
+    <Compile Include="DBConection.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainMenu.Designer.cs">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Koneksi.cs" />
+    <Compile Include="Model\barangModel.cs" />
+    <Compile Include="Model\detailPejualanModel.cs" />
+    <Compile Include="Model\detailPembelianModel.cs" />
+    <Compile Include="Model\kategoriModel.cs" />
+    <Compile Include="Model\pejualanModel.cs" />
+    <Compile Include="Model\pelangganModel.cs" />
+    <Compile Include="Model\satuanModel.cs" />
+    <Compile Include="Model\suplierModel.cs" />
+    <Compile Include="Model\userModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Barang\FormBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Barang\FormBarang.Designer.cs">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Barang\FormBarangSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Barang\FormBarangSearch.Designer.cs">
+      <DependentUpon>FormBarangSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Barang\FormBarangSearchPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Barang\FormBarangSearchPembelian.Designer.cs">
+      <DependentUpon>FormBarangSearchPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Kategori\FormKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Kategori\FormKategori.Designer.cs">
+      <DependentUpon>FormKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laporan\FormLaporanPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormLaporanPenjualan.Designer.cs">
+      <DependentUpon>FormLaporanPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pelanggan\FormPelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pelanggan\FormPelanggan.Designer.cs">
+      <DependentUpon>FormPelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pembelian\FormPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pembelian\FormPembelian.Designer.cs">
+      <DependentUpon>FormPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Penjualan\FormPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Penjualan\FormPenjualan.Designer.cs">
+      <DependentUpon>FormPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Satuan\FormSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Satuan\FormSatuan.Designer.cs">
+      <DependentUpon>FormSatuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Suplier\FormSuplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Suplier\FormSuplier.Designer.cs">
+      <DependentUpon>FormSuplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\User\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainMenu.resx">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Barang\FormBarang.resx">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Barang\FormBarangSearch.resx">
+      <DependentUpon>FormBarangSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Barang\FormBarangSearchPembelian.resx">
+      <DependentUpon>FormBarangSearchPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Kategori\FormKategori.resx">
+      <DependentUpon>FormKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Laporan\FormLaporanPenjualan.resx">
+      <DependentUpon>FormLaporanPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pelanggan\FormPelanggan.resx">
+      <DependentUpon>FormPelanggan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pembelian\FormPembelian.resx">
+      <DependentUpon>FormPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Penjualan\FormPenjualan.resx">
+      <DependentUpon>FormPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Satuan\FormSatuan.resx">
+      <DependentUpon>FormSatuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Suplier\FormSuplier.resx">
+      <DependentUpon>FormSuplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
